@@ -14,6 +14,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">Mi Portafolio</div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
             <ul class="nav-menu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#acerca" class="nav-link">Acerca de</a></li>
@@ -68,7 +72,7 @@
                     </p>
                     
                     <div class="skills">
-                        <h4 class="skills-title">Habilidades</h4>
+                        <h4 class="skills-title">Skills</h4>
                         <div class="skills-grid">
                             <div class="skill-item">
                                 <img src="images/python.png" alt="Python" class="skill-icon-img">
@@ -180,6 +184,12 @@
                     behavior: 'smooth',
                     block: 'start'
                 });
+
+                // Cierra el menú de hamburguesa después de hacer clic
+                const navToggle = document.getElementById('nav-toggle');
+                if (navToggle && navToggle.checked) {
+                    navToggle.checked = false;
+                }
             });
         });
 
